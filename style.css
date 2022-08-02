@@ -2,6 +2,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
 
 /* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Variables */
+:root {
+  --primary: #101f0f;
+  --secondary: linear-gradient(47.62deg, #e19a56 0%, #f2ba7c 70.1%);
+}
+
 /* Base Styles */
-/* Mobile Styles */
+body {
+  background: var(--secondary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
+header .menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .logo h1,
+.menu a,
+.project p {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 23px;
+  color: var(--primary);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.project {
+  display: inline-flex;
+  align-items: center;
+}
